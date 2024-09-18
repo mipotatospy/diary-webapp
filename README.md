@@ -1,5 +1,8 @@
-# Getting Started with Create React App
 
+
+# 🍅*POMODORO APP*🍅
+
+Pomodoro app made up of a To-Do section and a Pomodoro timer
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
