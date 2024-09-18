@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Form, Button, InputGroup } from 'react-bootstrap'
 
 export const EditToDoForm = ({editTodo, task}) => {
     const[value, setValue] = useState(task.task)
@@ -12,9 +13,11 @@ export const EditToDoForm = ({editTodo, task}) => {
     }
 
     return (
-        <form className='ToDoForm' onSubmit={handleSubmit}>
-            <input type='text' className='todo-input' value={value}placeholder='update task' onChange={(e)=>setValue(e.target.value)}/>
-            <button type='submit' className='todo-btn'>Edit Task</button>
-        </form>
+        <Form className='ToDoForm' onSubmit={handleSubmit}>
+            <InputGroup>
+                <Form.Control type='text' className='todo-input' value={value}placeholder='update task' onChange={(e)=>setValue(e.target.value)}/>
+                <Button type='submit' className='todo-btn btn-success'>Edit Task</Button>
+            </InputGroup>
+        </Form>
     )
 } 

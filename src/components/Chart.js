@@ -12,8 +12,6 @@ export const TimerChart = ({ currentTime }) => {
             label: 'Time',
             data: [0, 900],
             backgroundColor: ['rgba(192, 75, 75)','rgba(224, 224, 224)'],
-            borderColor: ['rgba(75, 192, 192, 1)', 'rgba(192, 75, 75, 1)'],
-            borderWidth: 1,
         },
         ],
     });
@@ -27,16 +25,14 @@ export const TimerChart = ({ currentTime }) => {
                 label: 'Time',
                 data: [currentTime, remainingTime > 0 ? remainingTime : 0],
                 backgroundColor: ['rgba(192, 75, 75)','rgba(224, 224, 224)'],
-                borderColor: ['rgba(75, 192, 192, 1)', 'rgba(192, 75, 75, 1)'],
-                borderWidth: 1,
             },
         ],
         });
     }, [currentTime]);
 
     return (
-        <div style={{ width: '400px', height: '400px' }} className="chart">
-        <Doughnut data={chartData} />
+        <div className="chart">
+            <Doughnut data={chartData} />
         </div>
     );
 };

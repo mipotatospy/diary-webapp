@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { useSyncExternalStore } from 'react';
+import { Button } from 'react-bootstrap';
 
 export const Timer = ({ setCurrentTime, currentTime }) => {
     const [isTimerRunning, startTimer] = useState(false)
@@ -33,9 +33,9 @@ export const Timer = ({ setCurrentTime, currentTime }) => {
         <div className='timer'>
 
             { !isTimerRunning ? (
-                <button onClick={startTaskTimer}>Start Timer</button>
+                <Button variant="danger" onClick={startTaskTimer}>Start Timer</Button>
             ) : (
-                <button onClick={stopTime}>Stop Timer</button>
+                <Button variant="danger" onClick={stopTime}>Stop Timer</Button>
             )}
             <p>{minutes < 10 ? "0 " + minutes : minutes} : {seconds < 10 ? "0 " + seconds : seconds}</p>
         </div>

@@ -3,7 +3,7 @@ import { ToDoForm } from './ToDoForm'
 import {v4 as uuidv4} from 'uuid';
 import { ToDo } from './ToDo'
 import { EditToDoForm } from './EditToDoForm';
-import { fetchRecipes } from '../api/api.js'
+import { Col, Row } from 'react-bootstrap';
 uuidv4();
 
 export const ToDoWrapper = () => {
@@ -36,17 +36,17 @@ export const ToDoWrapper = () => {
     // }, [])
 
     return (
-        <div className='ToDoWrapper'>
-            <h1>Get things done!</h1>
+        <Col xl={8} xs={12} md={6} className="d-flex ToDoWrapper">
+                <h1>Let's get things done!</h1>
             <ToDoForm addTodo={addTodo}/>
-            {todos.map((todo, index)=> (
-                todo.isEditing ? (
-                    <EditToDoForm editTodo={editTask} task={todo}/>
-                ) : (
-                    <ToDo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo}/>
-                )
+                {todos.map((todo, index)=> (
+                    todo.isEditing ? (
+                        <EditToDoForm editTodo={editTask} task={todo}/>
+                    ) : (
+                        <ToDo task={todo} key={index} toggleComplete={toggleComplete} deleteTodo={deleteTodo} editTodo={editTodo}/>
+                    )
 
-            ))}
-        </div>
+                ))}
+        </Col>
     )
 } 

@@ -1,23 +1,7 @@
 .App {
-  display:flex;
-}
-
-.Features{
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  margin: 50px;
-  align-items: center;
-}
-
-.FeaturesContainer{
-
-  border-color: brown;
-  border-style: solid;
-  border-radius: 15px;
-  position:fixed;
-  height: 600px;
-  
+  flex-direction: row;
+  height: 100%;
 }
 
 .timer{
@@ -27,25 +11,35 @@
   margin: 15px
 }
 
+.card {
+  align-self: center;
+  width: 100%;
+}
+
 .chart{
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  text-align: center; */
+  text-align: center;
   margin: 15px;
   align-self: center;
 }
 
-.ToDoWrapper{
-  flex-grow: 2;
+.FeaturesWrapper{
+  padding-top: 5rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
 }
 
-.ToDoForm{
-  background-color: rgb(230, 135, 33);
-  border-radius: 15px;
-  height: fit-content;
+.ToDoWrapper{
+  flex-direction: column;
+  padding-top: 5rem;
+}
+
+form {
   margin-block: 15px;
-  padding: 30px;
-  width:fit-content;
+  padding: 15px;
 }
 
 .ToDo{
@@ -56,11 +50,11 @@
   display: flex;
   justify-content: space-between;
   margin-block: 15px;
-  padding: 15px;
+  padding: 19px;
 }
 
 h1{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 .icon{
@@ -69,4 +63,28 @@ h1{
 
 .completed{
   text-decoration-line: line-through;
+}
+
+@media (max-width: 768px) {
+  .App {
+    display:flex;
+    flex-direction: column-reverse;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 5rem;
+    justify-content: center;
+  }
+
+  .ToDoWrapper{
+    flex-direction: column;
+    padding-top: 5rem;
+  }
+
+  .FeaturesWrapper{
+    padding-top: 5rem;
+  }
 }

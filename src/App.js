@@ -1,13 +1,16 @@
 import './App.css'
 import { ToDoWrapper } from './components/ToDoWrapper';
 import { FeaturesWrapper } from './components/FeaturesWrapper';
+import { Container, Row } from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
-      <ToDoWrapper/>
-      <FeaturesWrapper />
-    </div>
+    <Container fluid>
+      <Row className="App">
+        <ToDoWrapper/>
+        <FeaturesWrapper />
+      </Row>
+    </Container>
   );
 }
 
