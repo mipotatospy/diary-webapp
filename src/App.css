@@ -1,0 +1,72 @@
+.App {
+  display:flex;
+}
+
+.Features{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 50px;
+  align-items: center;
+}
+
+.FeaturesContainer{
+
+  border-color: brown;
+  border-style: solid;
+  border-radius: 15px;
+  position:fixed;
+  height: 600px;
+  
+}
+
+.timer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px
+}
+
+.chart{
+  /* display: flex;
+  flex-direction: column;
+  text-align: center; */
+  margin: 15px;
+  align-self: center;
+}
+
+.ToDoWrapper{
+  flex-grow: 2;
+}
+
+.ToDoForm{
+  background-color: rgb(230, 135, 33);
+  border-radius: 15px;
+  height: fit-content;
+  margin-block: 15px;
+  padding: 30px;
+  width:fit-content;
+}
+
+.ToDo{
+  align-items: center;
+  background-color: rgb(123, 161, 67);
+  border-radius: 15px;
+  color:aliceblue;
+  display: flex;
+  justify-content: space-between;
+  margin-block: 15px;
+  padding: 15px;
+}
+
+h1{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.icon{
+  margin: 5px;
+}
+
+.completed{
+  text-decoration-line: line-through;
+}
